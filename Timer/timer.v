@@ -94,9 +94,20 @@ module timer
     // Decrementador de tempo (minutos e segundos)
     always @(posedge ck1seg or posedge reset)
     begin
-        //------------
-        // COMPLETAR
-        //------------
+        if(~reset) begin
+            if (EA == 'd1) begin
+                if(count_sec == 'd0 & count_min > 'd0)
+                    count_sec <= LIMITESEC;
+                else if (count_sec > 'd0)
+                    count_sec <= count_sec - 'd1;
+                else 
+                    EA <= 'd0;
+                end
+            end
+        else begin
+            count_sec <= 'd0;
+            count_min <= 'd0;
+        end
     end
 
 
