@@ -1,0 +1,14 @@
+PRESET 1:
+Nome: Morte Lenta
+Tempo: 99min 30sec
+Potência: baixa
+
+PRESET 2:
+Nome: Bife Suculento
+Tempo: 3min 30sec
+Potência: média
+
+PRESET 3:
+Nome: Pipoca Doce
+Tempo: 1min 15sec
+Potência: alta
