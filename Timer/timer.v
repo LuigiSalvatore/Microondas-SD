@@ -31,12 +31,7 @@ module timer
     edge_detector start_right   (.clock(clock), .reset(reset), .din(start), .rising(start_int));                        
     //------------
     // initial begin
-    //     // count_sec <='b11111;
-    //     // count_min <='b111111;
-    //     // clock_count <= 'd11111;
-    //     EA <= 'd0;
-    //     ck1seg <= 0;
-    // end
+
     // Divisor de clock para gerar o ck1seg
     always @(posedge clock or posedge reset)
     begin
@@ -53,15 +48,6 @@ module timer
             end
         end
         
-        // //clock_count <= clock_count + 'd1;
-        // if(~reset) begin
-                 
-        //        // clock_count <= clock_count + 1;
-        
-        // end else begin
-        //     ck1seg <= 0;
-        //     clock_count <= 0;
-        // end
     end
     
 
@@ -156,9 +142,5 @@ module timer
     assign min_u = count_min % 10;
     assign min_d = count_min / 10;
     
-    // assign sec_u = 'd1;
-    // assign sec_d = 'd1;
-    // assign min_u = 'd1;
-    // assign min_d = 'd1;
     
 endmodule
