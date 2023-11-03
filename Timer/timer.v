@@ -122,7 +122,7 @@ module timer
                     count_min <= min;
                 end
                 if(sec >= LIMITESEC) begin
-                    count_sec <= LIMITESEC;
+                    count_sec <= 'd59;
                 end 
             end
 
@@ -155,7 +155,7 @@ module timer
     assign sec_d = count_sec / 10;
     assign min_u = count_min % 10;
     assign min_d = count_min / 10;
-    // assign EA_out = EA;
+    
     // assign sec_u = 'd1;
     // assign sec_d = 'd1;
     // assign min_u = 'd1;
